@@ -1,0 +1,172 @@
+:root {
+    --bg-color: #000;         
+    --snd-bg-color: #111;    
+    --text-color: #fff;      
+    --main-color: #00ff1e;   
+    --border-radius: 0.8rem;  
+    --nav-font-size: 16px;    
+    --form-font-size: 14px;   
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);          
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+    position: fixed;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    display: block;
+    padding: 6px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border-radius: var(--border-radius);
+}
+
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h2, h3 {
+    color: var(--main-color);
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+    font-size: var(--form-font-size);
+}
+
+.attendance-form input[type="text"] {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+}
+
+select {
+    width: calc(80% - 16px);
+}
+
+button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: var(--main-color);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+th, td {
+    border: 1px solid var(--text-color);
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--snd-bg-color);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.logout-btn {
+    background-color: #f44336;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    margin-top: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+

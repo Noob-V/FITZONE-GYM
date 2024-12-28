@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Guides - FitZone Fitness Center</title>
+    <link rel="stylesheet" href="guide.css"> 
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>FitZone MyGuide</h2>
+        <ul>
+            <li><a href="attendance_tracking.php">Attendance Tracking</a></li>
+            <li><a href="staff_dashboard.php">Dashboard</a></li>
+            <li><a href="staff_profile.php">Profile Management</a></li>
+            <li><a href="query_responses.php">Query Responses</a></li>
+            <li><a href="logout.php" class="logout-btn">Logout</a></li>
+        </ul>
+    </div>
+
+
+    <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search workout guides..." onkeyup="filterGuides()">
+        <select id="filterSelect" onchange="filterGuides()">
+            <option value="all">All Packages</option>
+            <option value="starter">Starter Package</option>
+            <option value="essential">Essential Package</option>
+            <option value="premium">Premium Package</option>
+            <option value="ultimate">Ultimate Fitness Package</option>
+            <option value="couples">Couples Package</option>
+            <option value="family">Family Package</option>
+            <option value="online">Online Training Package</option>
+            <option value="senior">Senior Fitness Package</option>
+            <option value="student">Student Package</option>
+        </select>
+        <button onclick="filterGuides()">Search</button>
+    </div>
+
+
+    <div class="main-content">
+        <h2>Workout Guides</h2>
+        <br>
+        <p>Explore the recommended workout guides for each package. Each guide provides tailored exercises and activities to help members achieve their fitness goals:</p>
+        <br><br>
+
+        <div class="box" data-package="starter">
+            <h3>Starter Package Workout Guide</h3>
+            <p>This guide is ideal for beginners who are just embarking on their fitness journey. It emphasizes building a strong foundation for health and fitness:</p>
+            <ul>
+                <li><strong>Basic cardio workouts:</strong> Engage in 20-30 minutes of low-impact cardio activities such as walking, cycling, or light jogging at least three times a week to improve cardiovascular health and stamina.</li>
+                <li><strong>Strength training:</strong> Incorporate bodyweight exercises like squats, push-ups, and lunges twice a week. These exercises help develop core strength and improve overall body composition.</li>
+                <li><strong>Flexibility training:</strong> Simple stretching routines after each workout enhance flexibility, reduce muscle tension, and prevent injuries, ensuring a well-rounded fitness approach.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="essential">
+            <h3>Essential Package Workout Guide</h3>
+            <p>This guide is designed for those who are committed to regular workouts and want to establish a balanced fitness routine. It focuses on enhancing both strength and endurance:</p>
+            <ul>
+                <li><strong>Cardio workouts:</strong> Aim for 30-40 minutes of moderate-intensity cardio such as running, cycling, or swimming, at least four times a week to boost heart health and aid in weight management.</li>
+                <li><strong>Strength training:</strong> Full-body workouts with weights or resistance bands three times a week will help build muscle strength, increase metabolism, and improve bone density.</li>
+                <li><strong>Flexibility training:</strong> Incorporate yoga or Pilates sessions once a week to enhance flexibility, core strength, and relaxation, promoting overall well-being.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="premium">
+            <h3>Premium Package Workout Guide</h3>
+            <p>This guide caters to advanced individuals seeking personalized training and quicker results. It emphasizes high-intensity workouts and tailored nutrition:</p>
+            <ul>
+                <li><strong>Intensive cardio sessions:</strong> Engage in HIIT (High-Intensity Interval Training) workouts, 4-5 times a week, to burn calories, build endurance, and improve metabolic rate.</li>
+                <li><strong>Strength training:</strong> Split routines targeting different muscle groups, four times a week, will help increase muscle mass and strength, leading to a more toned physique.</li>
+                <li><strong>Flexibility and recovery:</strong> Incorporate foam rolling, yoga, and dynamic stretching to aid recovery and improve flexibility, helping to prevent injuries and enhance performance.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="ultimate">
+            <h3>Ultimate Fitness Package Workout Guide</h3>
+            <p>This comprehensive guide is designed for fitness enthusiasts looking for an all-inclusive approach. It combines rigorous training with wellness strategies:</p>
+            <ul>
+                <li><strong>Cardio:</strong> Implement a mix of HIIT, steady-state, and circuit training sessions 5-6 times a week for comprehensive cardiovascular conditioning.</li>
+                <li><strong>Strength training:</strong> Follow periodized strength training programs that vary intensity and volume, focusing on hypertrophy and strength gains, training at least four times a week.</li>
+                <li><strong>Nutrition and recovery:</strong> Detailed meal planning advice, hydration tips, and structured recovery strategies will support fitness goals and overall health.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="couples">
+            <h3>Couples Package Workout Guide</h3>
+            <p>This guide encourages couples to stay fit together through enjoyable and engaging workouts. It fosters teamwork and motivation:</p>
+            <ul>
+                <li><strong>Partner workouts:</strong> Include exercises that can be performed together, such as partner squats and resistance band exercises, making workouts fun and interactive.</li>
+                <li><strong>Group classes:</strong> Participate in fitness classes that encourage teamwork and camaraderie, strengthening the bond while achieving fitness goals.</li>
+                <li><strong>Fun outdoor activities:</strong> Schedule regular hikes, bike rides, or sports to keep things fresh and enjoyable, ensuring both partners stay active.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="family">
+            <h3>Family Package Workout Guide</h3>
+            <p>This guide focuses on keeping families active together through enjoyable activities and workouts tailored for all ages:</p>
+            <ul>
+                <li><strong>Family workouts:</strong> Schedule family exercise sessions with age-appropriate activities for all members, promoting bonding and healthy habits.</li>
+                <li><strong>Youth fitness classes:</strong> Encourage kids to participate in fun, engaging fitness classes that teach them the importance of staying active.</li>
+                <li><strong>Fun challenges:</strong> Organize family fitness challenges that encourage participation and a spirit of friendly competition, making fitness a family affair.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="online">
+            <h3>Online Training Package Workout Guide</h3>
+            <p>This guide is designed for individuals who prefer the flexibility of working out from home, focusing on accessibility and convenience:</p>
+            <ul>
+                <li><strong>Virtual classes:</strong> Access online workout classes that fit your schedule and fitness level, providing flexibility and variety in workouts.</li>
+                <li><strong>Customized workouts:</strong> Follow tailored online workout plans that can be adjusted as you progress, ensuring the workouts remain challenging and effective.</li>
+                <li><strong>Weekly check-ins:</strong> Participate in virtual check-ins with trainers for motivation and accountability, helping to stay committed to fitness goals.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="senior">
+            <h3>Senior Fitness Package Workout Guide</h3>
+            <p>This guide is specifically designed for seniors, focusing on maintaining mobility, strength, and overall health in a safe and effective manner:</p>
+            <ul>
+                <li><strong>Low-impact exercises:</strong> Incorporate low-impact cardio workouts, such as walking or swimming, to enhance cardiovascular health without straining joints.</li>
+                <li><strong>Strength training:</strong> Utilize light weights or resistance bands for strength-building exercises that help maintain muscle mass and bone density.</li>
+                <li><strong>Balance and flexibility:</strong> Include balance exercises and stretching to prevent falls and enhance mobility, fostering independence and confidence in physical activities.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-package="student">
+            <h3>Student Package Workout Guide</h3>
+            <p>This guide is tailored for students balancing studies and fitness, emphasizing efficiency and flexibility in workouts:</p>
+            <ul>
+                <li><strong>Efficient workouts:</strong> Design quick workouts that can be done in under 30 minutes, allowing students to fit fitness into their busy schedules.</li>
+                <li><strong>Group classes:</strong> Encourage participation in group fitness classes for social engagement and motivation, making fitness a fun part of campus life.</li>
+                <li><strong>Healthy habits:</strong> Provide guidance on maintaining a balanced diet and staying active amidst academic responsibilities, promoting a healthy lifestyle overall.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="guide.js"></script> 
+</body>
+</html>

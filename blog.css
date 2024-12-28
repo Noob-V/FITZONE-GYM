@@ -1,0 +1,231 @@
+:root {
+    --bg-color: #0e0e0e;
+    --snd-bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+    --main-color: #00ff1e;
+    --hover-color: #0aff5b;
+    --border-radius: 6px;
+    --transition-speed: 0.3s;
+    --max-post-width: 800px;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+.nav {
+    background-color: var(--snd-bg-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav .logo {
+    font-size: 24px;
+    color: var(--main-color);
+    transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.nav .logo:hover {
+    transform: scale(1.1);
+    color: var(--hover-color);
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.nav-links a:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+
+h1, h2 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+
+.set-username {
+    background-color: var(--snd-bg-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--main-color);
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--text-color);
+    transition: border-color var(--transition-speed);
+    font-size: 1em;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: var(--hover-color);
+    outline: none;
+}
+
+
+button {
+    background-color: var(--main-color);
+    border: none;
+    padding: 10px 15px;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+
+.create-post-form {
+    background-color: var(--snd-bg-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin: 0px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.post {
+    background-color: var(--snd-bg-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: var(--max-post-width);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.6em;
+}
+
+.post p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+
+.comment {
+    background-color: var(--snd-bg-color);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.comment h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+}
+
+
+.comment-form {
+    margin: 15px 0;
+}
+
+.comment-form input[type="text"] {
+    margin: 0 0 5px 0;
+    width: calc(100% - 16px);
+    padding: 8px;
+    font-size: 1em;
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"], textarea {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .create-post-form {
+        padding: 15px;
+    }
+
+    .set-username {
+        padding: 15px;
+    }
+
+    .post {
+        padding: 20px;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    width: 50px;
+}
+
+
+
+.hide {
+    top: -100px;
+}
+
+.show {
+    top: 0;
+}
